@@ -1,13 +1,10 @@
 import * as mongoose from 'mongoose';
 
-export const JogadorSchema = new mongoose.Schema(
-  {
-    celular: String,
-    email: { type: String, unique: true },
+export const JogadorSchema = new mongoose.Schema({
+    email: { type: String, unique: true},
+    telefoneCelular: { type: String},
     nome: String,
     ranking: String,
-    posicao: Number,
-    urlFoto: String,
-  },
-  { timestamps: true, collection: 'jogadores' },
-);
+    posicaoRanking: Number,
+    urlFotoJogador: String,
+}, {timestamps: true, collection: 'jogadores'});
